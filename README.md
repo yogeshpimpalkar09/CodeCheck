@@ -1,6 +1,6 @@
-# CodeSaathi
+# CodeError
 
-CodeSaathi is a beginner-friendly coding-error explainer for students in India. It turns common programming errors into simple English or Hindi explanations, then suggests clear ways to fix them.
+CodeError is a beginner-friendly coding-error explainer for students in India. It turns common programming errors into simple English or Hindi explanations, then suggests clear ways to fix them.
 
 ## The problem
 
@@ -8,7 +8,7 @@ Coding errors can feel intimidating, especially when error messages use unfamili
 
 ## The solution
 
-Users can paste an error message, code, or both. CodeSaathi provides:
+Users can paste an error message, code, or both. CodeError provides:
 
 - Simple English or Hindi explanations
 - A likely error line with a visual arrow
@@ -29,4 +29,4 @@ Open `index.html` in a modern web browser.
 
 ## Safety
 
-CodeSaathi runs in the browser. Do not paste passwords, API keys, or other secrets into the app.
+CodeError runs in the browser. Do not paste passwords, API keys, or other secrets into the app.
