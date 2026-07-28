@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CodeSaathi explains coding errors in simple English or Hindi." />
+    <title>CodeSaathi | Error Explainer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="CodeSaathi home">
+          <span class="brand-mark">&lt;/&gt;</span>
+          <span>Code<span>Saathi</span></span>
+        </a>
+        <span class="tag">Built for learners in India</span>
+      </nav>
+
+      <section class="hero" id="top">
+        <p class="eyebrow">YOUR FRIENDLY DEBUGGING COMPANION</p>
+        <h1>Errors in code?<br /><span>Understand your way.</span></h1>
+        <p class="intro">Paste a confusing error message. CodeSaathi turns it into a simple English or Hindi explanation and clear next steps.</p>
+      </section>
+
+      <section class="workspace" aria-label="Error explainer">
+        <div class="input-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="step">STEP 1</p>
+              <h2>Paste your error or code</h2>
+            </div>
+            <div class="select-controls">
+              <label class="language-select">Code language
+                <select id="language">
+                  <option value="JavaScript">JavaScript</option>
+                  <option value="Python">Python</option>
+                  <option value="Java">Java</option>
+                  <option value="C++">C++</option>
+                  <option value="Other">Other</option>
+                </select>
+              </label>
+              <label class="language-select">Explain in
+                <select id="explanationLanguage">
+                  <option value="english">Simple English</option>
+                  <option value="hindi">Hindi</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <textarea id="errorInput" rows="9" placeholder="Paste an error message, your code, or both. Example: ReferenceError: userName is not defined"></textarea>
+          <div class="input-footer">
+            <button class="sample-button" id="sampleButton" type="button">Try an example</button>
+            <button class="explain-button" id="explainButton" type="button">Check & explain <span aria-hidden="true">→</span></button>
+          </div>
+          <p class="hint">For the best answer, paste the error plus the related code. Your code stays in this browser—never paste passwords or secret keys.</p>
+        </div>
+
+        <article class="result-panel" id="resultPanel" aria-live="polite">
+          <div class="empty-state" id="emptyState">
+            <div class="spark">✦</div>
+            <h2>Let’s solve it together</h2>
+            <p>Paste an error message, code, or both to get a beginner-friendly explanation here.</p>
+          </div>
+          <div class="answer hidden" id="answer">
+            <div class="answer-topline">
+              <p class="step">STEP 2 · EXPLANATION</p>
+              <button class="copy-button" id="copyButton" type="button">Copy</button>
+            </div>
+            <h2 id="errorTitle"></h2>
+            <div class="location-box hidden" id="locationBox">
+              <p id="locationLabel"></p>
+              <code id="locationCode"></code>
+            </div>
+            <section class="answer-section">
+              <h3 id="meaningHeading">What does this mean?</h3>
+              <p id="meaning"></p>
+            </section>
+            <section class="answer-section">
+              <h3 id="fixHeading">How do I fix it?</h3>
+              <ol id="steps"></ol>
+            </section>
+            <section class="tip-box">
+              <span aria-hidden="true">💡</span>
+              <p id="tip"></p>
+            </section>
+            <button class="simple-button" id="simpleButton" type="button">I don’t understand — show a simple example</button>
+            <section class="simple-example hidden" id="simpleExample">
+              <p class="step">SIMPLER EXAMPLE</p>
+              <h3 id="exampleTitle"></h3>
+              <p id="exampleText"></p>
+              <pre><code id="exampleCode"></code></pre>
+            </section>
+            <section class="fix-section hidden" id="fixSection">
+              <p class="step">STEP 3 · SUGGESTED FIX</p>
+              <h3 id="fixCodeHeading">Try this corrected code</h3>
+              <pre><code id="fixedCode"></code></pre>
+            </section>
+          </div>
+        </article>
+      </section>
+
+      <section class="how-it-works">
+        <p class="eyebrow">HOW IT WORKS</p>
+        <div class="feature-grid">
+          <div><span>01</span><h3>Paste</h3><p>Add your error message.</p></div>
+          <div><span>02</span><h3>Understand</h3><p>Choose simple English or Hindi.</p></div>
+          <div><span>03</span><h3>Fix</h3><p>Follow practical steps.</p></div>
+        </div>
+      </section>
+    </main>
+    <footer>Made with care for first-time coders · CodeSaathi</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
